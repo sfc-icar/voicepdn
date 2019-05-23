@@ -6,7 +6,7 @@ Virtual IDOL using Web Speech API
 
 デモ：
 https://web.sfc.keio.ac.jp/~s16660tn/voicepdn/
-
+aaaaaaaaaaa
 Speech recognitionについて：
 https://developer.mozilla.org/ja/docs/Web/API/SpeechRecognition
 

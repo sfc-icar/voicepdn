@@ -4,7 +4,7 @@ Virtual IDOL using Web Speech API
 <br>
 「お疲れ様です」「手を振って」「緒方智絵里」に反応
 
-デモ：
+hogeデモ：
 https://web.sfc.keio.ac.jp/~s16660tn/voicepdn/
 
 Speech recognitionについて：
@@ -18,3 +18,4 @@ https://caniuse.com/#feat=speech-recognition
 - SSL接続無しだと毎回許可が必要。SSLだと初回のみ。
 
 ###　書いてみるテスト　by　saikawa
+###  ターミナルコマンド完全に理解した by torachan

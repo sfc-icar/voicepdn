@@ -16,3 +16,5 @@ https://caniuse.com/#feat=speech-recognition
 
 ### Tips
 - SSL接続無しだと毎回許可が必要。SSLだと初回のみ。
+
+###　書いてみるテスト　by　saikawa

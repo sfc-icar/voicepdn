@@ -4,7 +4,7 @@ Virtual IDOL using Web Speech API
 <br>
 「お疲れ様です」「手を振って」「緒方智絵里」に反応
 
-hogeデモ：
+もうむりhogeデモ：
 https://web.sfc.keio.ac.jp/~s16660tn/voicepdn/
 
 Speech recognitionについて：

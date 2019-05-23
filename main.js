@@ -71,7 +71,7 @@ function text_match(){
         var video_id="greet";
         var div_id="charaGreet";
         play_movie(video_id,div_id);
-    }else  if(~rtnString.indexOf("緒方")||~rtnString.indexOf("智絵里")||~rtnString.indexOf("ちえり")){
+    }else if(~rtnString.indexOf("緒方")||~rtnString.indexOf("智絵里")||~rtnString.indexOf("ちえり")){
         var video_id="surprise";
         var div_id="charaSurprise";
         play_movie(video_id,div_id);

@@ -2,7 +2,6 @@ var flag_speech = 0;//認識確定状況フラグ
 var flag_charaPlay = false;	//イベントモーション再生中フラグ
 var rtnString;	//認識結果格納用
 
-
 //ロード時に読み込み・イベントモーションを隠す
 function charaHide(){
 	document.getElementById("charaWave").style.display = "none";
@@ -70,6 +69,7 @@ function text_match(){
     }else if(~rtnString.indexOf("お疲れ")){
         var video_id="greet";
         var div_id="charaGreet";
+				new Audio('ojigi.mp3').play();
         play_movie(video_id,div_id);
     }else  if(~rtnString.indexOf("緒方")||~rtnString.indexOf("智絵里")||~rtnString.indexOf("結婚")){
         var video_id="surprise";

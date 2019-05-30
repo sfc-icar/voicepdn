@@ -1,8 +1,8 @@
 var flag_speech = 0;//認識確定状況フラグ
 var flag_charaPlay = false;	//イベントモーション再生中フラグ
 var rtnString;	//認識結果格納用
-		
-		
+
+
 //ロード時に読み込み・イベントモーションを隠す
 function charaHide(){
 	document.getElementById("charaWave").style.display = "none";
@@ -24,13 +24,13 @@ function voiceRec() {
             voiceRec();
         }
     };
-			
+
 			//音の検出が停止された場合
     recognition.onsoundend = function() {
 		console.log("停止中");
     	voiceRec();
     };
-			
+
 			//認識結果が返った場合
     recognition.onresult = function(event) {
         var results = event.results;
@@ -43,7 +43,7 @@ function voiceRec() {
 			    rtnString = results[i][0].transcript
                 console.log("【"+rtnString+"】");//確定結果をコンソール表示
 
-    			//イベントモーション再生中の場合500ミリ秒waitして再度認識 
+    			//イベントモーション再生中の場合500ミリ秒waitして再度認識
 	    		if(flag_charaPlay == true){
 		    		setTimeout("voiceRec()", 500);
 						//キーワード分岐
@@ -75,6 +75,9 @@ function text_match(){
         var video_id="surprise";
         var div_id="charaSurprise";
         play_movie(video_id,div_id);
+    }else  if(~rtnString.indexOf("初めまして")){
+        window.open('https://dic.pixiv.net/a/%E7%B7%92%E6%96%B9%E6%99%BA%E7%B5%B5%E9%87%8C', '_blank');
+				voiceRec();
     }
 }
 //ビデオ再生用関数
@@ -84,9 +87,9 @@ function play_movie(video_id,div_id){
     movie_event.play();//イベントモーション再生開始
     flag_charaPlay = true;
     document.getElementById("charaWait").style.display = "none";//待機モーション消去
-    document.getElementById(div_id).style.display = "block";//イベントモーション表示					
+    document.getElementById(div_id).style.display = "block";//イベントモーション表示
     //イベントモーション再生終了時
-    movie_event.addEventListener('ended', function(e){						
+    movie_event.addEventListener('ended', function(e){
         document.getElementById(div_id).style.display = "none";//イベントモーション消去
         wait.play();//待機モーション再生開始
         document.getElementById("charaWait").style.display = "block";//待機モーション表示

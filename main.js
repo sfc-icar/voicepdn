@@ -63,15 +63,17 @@ function voiceRec() {
 }
 //テキストマッチ関数
 function text_match(){
-    if(~rtnString.indexOf("手を振って")){
-        var video_id="wave";
-        var div_id="charaWave";
-        play_movie(video_id,div_id);
+    if(~rtnString.indexOf("お金が欲しい")){
+        // console.log("お金ほしいが呼ばれています");
+        // var video_id="wave";
+        // var div_id="charaWave";
+        // play_movie(video_id,div_id);
+        location.href = "https://townwork.net/tokyo/";
     }else if(~rtnString.indexOf("お疲れ")){
         var video_id="greet";
         var div_id="charaGreet";
         play_movie(video_id,div_id);
-    }else if(~rtnString.indexOf("緒方")||~rtnString.indexOf("智絵里")||~rtnString.indexOf("ちえり")){
+    }else  if(~rtnString.indexOf("緒方")||~rtnString.indexOf("智絵里")||~rtnString.indexOf("ちえり")){
         var video_id="surprise";
         var div_id="charaSurprise";
         play_movie(video_id,div_id);
@@ -94,3 +96,4 @@ function play_movie(video_id,div_id){
         voiceRec();//音声認識開始
     }, false);
 }
+

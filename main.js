@@ -75,7 +75,19 @@ function text_match(){
         var video_id="surprise";
         var div_id="charaSurprise";
         play_movie(video_id,div_id);
+    }else if(~rtnString.indexOf("お姉ちゃん")){
+        alert('call my name');
+    }else if(~rtnString.indexOf("日数")&&~rtnString.indexOf("Twitter")){
+        window.open('https://twitter.com/h_kzsfc', '_blank');
+        voiceRec();
+    }else if(~rtnString.indexOf("たつき")&&~rtnString.indexOf("Twitter")){
+        window.open('https://twitter.com/9TatsuKi6', '_blank');
+        voiceRec();
+    }else if(~rtnString.indexOf("斉川さん")&&~rtnString.indexOf("Twitter")){
+        window.open('https://twitter.com/saikawa', '_blank');
+        voiceRec();
     }
+    
 }
 //ビデオ再生用関数
 function play_movie(video_id,div_id){

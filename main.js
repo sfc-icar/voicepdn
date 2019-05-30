@@ -94,3 +94,5 @@ function play_movie(video_id,div_id){
         voiceRec();//音声認識開始
     }, false);
 }
+
+

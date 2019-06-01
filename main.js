@@ -1,6 +1,15 @@
 var flag_speech = 0;//認識確定状況フラグ
 var flag_charaPlay = false;	//イベントモーション再生中フラグ
 var rtnString;	//認識結果格納用
+var balloon_text;
+
+var script = [
+	"皆さんのおかげです、本当に嬉しいです",
+	"わぁ、イベントが開催されているみたいです。楽しそう…",
+	"みんな、がんばってるから…私も人一倍、がんばらなくちゃ…"
+];
+
+
 
 //ロード時に読み込み・イベントモーションを隠す
 function charaHide(){
@@ -9,6 +18,19 @@ function charaHide(){
 	document.getElementById("charaSurprise").style.display = "none";
 	voiceRec();	//音声認識メイン関数を実行
 }
+
+function balloon(){
+  document.getElementById("wrapper").style.display = "block";
+  var comment = document.getElementById("comment");
+  comment.innerHTML = balloon_text;
+  console.log("智絵里:"+balloon_text);/*
+  if(isAnswer==true && isDefalttalking==false){
+      sendLog();
+  }*/
+  setTimeout(function(){
+    document.getElementById("wrapper").style.display = "none";},3000);
+}
+
 //音声認識メイン関数
 function voiceRec() {
     window.SpeechRecognition = window.SpeechRecognition || webkitSpeechRecognition;
@@ -74,6 +96,10 @@ function text_match(){
     }else  if(~rtnString.indexOf("緒方")||~rtnString.indexOf("智絵里")||~rtnString.indexOf("結婚")){
         var video_id="surprise";
         var div_id="charaSurprise";
+
+				balloon_text=script[Math.floor(Math.random() * script.length)];
+
+				setTimeout(balloon(),5000);
         play_movie(video_id,div_id);
     }
 }

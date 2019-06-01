@@ -1,29 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
+  <meta charset="UTF-8">
 	<title>Web Speech PDN</title>
 
-	<style type="text/css">
-	#content
-    {
-     margin-left:auto;
-     margin-right:auto;
-     width:720px;
-    }
-	</style>
+	<link rel="stylesheet" type="text/css" href="style.css">
 	<script src="main.js"></script>
 </head>
 
 <body onLoad="charaHide()">
 	<br>
-	<div id="content">
+	<div id="chara">
 		<!--HTML5 video 自動再生の可否はブラウザに依存。iOS版Chrome動作不可-->
 		<div id="charaWait"><video src="waiting.mp4"  width="680" id="wait" autoplay loop muted></video></div>
 		<div id="charaWave"><video src="waving.mp4" width="680" id="wave" muted></video></div>
 		<div id="charaGreet"><video src="greeting.mp4" width="680" id="greet" muted></video></div>
 		<div id="charaSurprise"><video src="surprising.mp4" width="680" id="surprise" muted></video></div>
 	</div>
+
+  <div id="wrapper">
+		<p class="comment" id = "comment">　ち、智絵里と……おはなし……しませんか……？　</p>
+	</div>
+
 </body>
 
 </html>

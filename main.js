@@ -11,6 +11,11 @@ var script = [
 	"みんなを幸せにできるアイドルになって、ファンに笑顔を届けるために…恥ずかしいなんて、言ってられないですよね"
 ];
 
+var voice_otsukare =[
+	"otsukare.mp3",
+	"otsukare2.mp3"
+];
+
 
 
 //ロード時に読み込み・イベントモーションを隠す
@@ -18,6 +23,8 @@ function charaHide(){
 	document.getElementById("charaWave").style.display = "none";
 	document.getElementById("charaGreet").style.display = "none";
 	document.getElementById("charaSurprise").style.display = "none";
+	setTimeout(function(){
+		document.getElementById("wrapper").style.display = "none";},5000);
 	voiceRec();	//音声認識メイン関数を実行
 }
 
@@ -105,7 +112,7 @@ function text_match(){
 		}else if(~rtnString.indexOf("お疲れ")){
 				var video_id="greet";
 				var div_id="charaGreet";
-				new Audio('ojigi.mp3').play();
+				new Audio(voice_otsukare[Math.floor(Math.random() * voice_otsukare.length)]).play();
 				play_movie(video_id,div_id);
     }else  if(~rtnString.indexOf("緒方")||~rtnString.indexOf("智絵里")||~rtnString.indexOf("結婚")){
         var video_id="surprise";

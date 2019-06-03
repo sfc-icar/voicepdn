@@ -90,11 +90,23 @@ function text_match(){
         var video_id="wave";
         var div_id="charaWave";
         play_movie(video_id,div_id);
-    }else if(~rtnString.indexOf("お疲れ")){
+    }else if(~rtnString.indexOf("おはよう")){
         var video_id="greet";
         var div_id="charaGreet";
+				new Audio('ohayou.mp3').play();
+		}else if(~rtnString.indexOf("何してる")){
+				var video_id="greet";
+				var div_id="charaGreet";
+				new Audio('lala.mp3').play();
+		}else if(~rtnString.indexOf("誰")||~rtnString.indexOf("名前")){
+				var video_id="greet";
+				var div_id="charaGreet";
+				new Audio('self_intro.mp3').play();
+		}else if(~rtnString.indexOf("お疲れ")){
+				var video_id="greet";
+				var div_id="charaGreet";
 				new Audio('ojigi.mp3').play();
-        play_movie(video_id,div_id);
+				play_movie(video_id,div_id);
     }else  if(~rtnString.indexOf("緒方")||~rtnString.indexOf("智絵里")||~rtnString.indexOf("結婚")){
         var video_id="surprise";
         var div_id="charaSurprise";
